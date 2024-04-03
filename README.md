@@ -12,7 +12,7 @@
     </dependency>
     ```
 
-    > 🥰已经发布在中央仓库：https://central.sonatype.com/artifact/online.zust.qcqcqc.utils/api-current-limiter-starter
+    > 🥰已经发布在中央仓库：https://central.sonatype.com/artifact/online.zust.qcqcqc.utils/api-current-limiter-starter-boot3
 
 - 上一个版本是：1.0.0
 
