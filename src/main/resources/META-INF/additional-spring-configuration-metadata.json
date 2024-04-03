@@ -1,0 +1,54 @@
+{
+  "properties": [
+    {
+      "name": "limiter",
+      "type": "java.util.Map",
+      "properties": [
+        {
+          "name": "enable",
+          "type": "java.lang.Boolean"
+        },
+        {
+          "name": "type",
+          "type": "java.lang.String"
+        },
+        {
+          "name": "remote-info",
+          "type": "java.util.Map",
+          "properties": [
+            {
+              "name": "use-proxy",
+              "type": "java.lang.Boolean"
+            },
+            {
+              "name": "user-key",
+              "type": "java.lang.String"
+            }
+          ]
+        },
+        {
+          "name": "global",
+          "type": "java.util.Map",
+          "properties": [
+            {
+              "name": "enable",
+              "type": "java.lang.Boolean"
+            },
+            {
+              "name": "limit-num",
+              "type": "java.lang.Integer"
+            },
+            {
+              "name": "seconds",
+              "type": "java.lang.Integer"
+            },
+            {
+              "name": "on-method",
+              "type": "java.lang.Boolean"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

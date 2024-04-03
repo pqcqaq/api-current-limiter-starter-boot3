@@ -1,0 +1,17 @@
+## AutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  online.zust.qcqcqc.utils.config.condition.LimitAspectCondition, \
+  online.zust.qcqcqc.utils.config.condition.GlobalLimitInterceptorCondition, \
+  online.zust.qcqcqc.utils.config.base.BaseLimiterConfig, \
+  online.zust.qcqcqc.utils.aspects.CurrentLimitAspect, \
+  online.zust.qcqcqc.utils.aspects.IntervalLimitAspect, \
+  online.zust.qcqcqc.utils.aspects.ConcurrentLimitAspect, \
+  online.zust.qcqcqc.utils.config.WebConfigurer, \
+  online.zust.qcqcqc.utils.manager.concurrent.BaseMapConcurrentLimitManager, \
+  online.zust.qcqcqc.utils.manager.concurrent.BaseRedisConcurrentLimitManager, \
+  online.zust.qcqcqc.utils.manager.current.BaseMapCurrentLimitManager, \
+  online.zust.qcqcqc.utils.manager.current.BaseRedisCurrentLimitManager, \
+  online.zust.qcqcqc.utils.manager.interval.BaseMapIntervalLimitManager, \
+  online.zust.qcqcqc.utils.manager.interval.BaseRedisIntervalLimitManager
+
+
