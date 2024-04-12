@@ -12,6 +12,7 @@ local currentNum = redis.call('zcard', key);
 -- 判断是否超过限制次数
 if currentNum < limitNum then
     redis.call('zadd', key, currentTime, currentTime);
+    redis.call('EXPIRE', key, 24 * 60 * 60) -- 设置过期时间为24小时
     return 1;
 else
     return 0;

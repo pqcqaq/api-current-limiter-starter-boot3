@@ -13,6 +13,7 @@ end
 -- 判断是否超过限制次数
 if currentNum == 0 then
     redis.call('zadd', key, currentTime, currentTime);
+    redis.call('EXPIRE', key, 24 * 60 * 60) -- 设置过期时间为24小时
     return 1;
 else
     local lastTime = redis.call('zrange', key, -1, -1)[1];
@@ -20,6 +21,7 @@ else
         return 0;
     else
         redis.call('zadd', key, currentTime, currentTime);
+        redis.call('EXPIRE', key, 24 * 60 * 60) -- 设置过期时间为24小时
         return 1;
     end;
 end;

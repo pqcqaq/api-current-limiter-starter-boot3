@@ -15,10 +15,14 @@ end
 
 if #infos == 0 then
     redis.call("RPUSH", key, currentTime)
+    -- 设置过期时间为24小时
+    redis.call("EXPIRE", key, 24 * 60 * 60)
     return 1
 else
     if #infos < limitNum then
         redis.call("RPUSH", key, currentTime)
+        -- 设置过期时间为24小时
+        redis.call("EXPIRE", key, 24 * 60 * 60)
         return 1
     else
         return 0
